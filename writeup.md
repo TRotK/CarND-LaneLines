@@ -33,7 +33,7 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline is as follows. 
+#### My pipeline is as follows. 
 
 * I converted the images to grayscale.
 * I applied Gaussian smoothing with kernel size of 5 to suppress noise.
@@ -48,7 +48,7 @@ My pipeline is as follows.
 ![alt text][fig5]
 ![alt text][fig6]
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() as my_draw_lines().
+#### In order to draw a single line on the left and right lanes, I modified the draw_lines() as my_draw_lines().
 
 * I separated the hough line segments into two groups according to their slope and position (left/right) on the image.
 * I applied linear regression on two sets of line segments, respectively, to estimate two line equations.
@@ -61,10 +61,9 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 ![alt text][fig11]
 ![alt text][fig12]
 
-Test on Videos:
+#### Test on Videos:
 
-![alt text][vid1]
-
+* The pipeline works well on solidWhiteRight.mp4 and solidYellowLeft.mp4. The resulting videos are in the folder test_videos_output.
 
 
 ### 2. Identify potential shortcomings with your current pipeline
