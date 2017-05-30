@@ -71,25 +71,27 @@ The pipeline above works well on solidWhiteRight.mp4 and solidYellowLeft.mp4. Th
 In order to take on the challenge video clip, I did the following modification to my pipeline.
 
 * I skipped the grayscale step for better contrast.
+* I made slope filtering more strict, i.e. to eliminate the horizontal edges.
 * Instead of using a simple linear regression, I incorporated RANSAC algorithm for outlier rejection. 
 * I still fit endpoints using linear regression but only on the inliers. 
 * RANSAC regression was implemented with scikit-learn library.
-* The resulting video is stored in the folder test_videos_output, named challenge.mp4.
+* If no lane detected, skip this frame to prevent raising errors. (Not used in the challenge actually)  
+* The resulting video are stored in the folder test_videos_output, named challenge.mp4.
 * The enhanced pipeline still works well on both solidWhiteRight.mp4 and solidYellowLeft.mp4.
 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
-One potential shortcoming would be what would happen when ... 
+* RANSAC is an iterative algorithm, and therefore is potentially inefficient. 
 
-Another shortcoming could be ...
+* The real-world pavement could be even more challenging than what happens in the video challenge.mp4, such as a ruleless break in cement concrete pavement. The current pipeline is using slope which could fail on vertical breaks.  
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+* A possible improvement for the first shortcoming would be to enhance the preprocessing to make the input line segments to RANSAC as few as possible. So, RANSAC algorithm would work very fast on a small number of sample points. 
 
-Another potential improvement could be to ...
+* A potential improvement for the second shortcoming could be to use color segmentation such as modeling the color probability.
 
 
 
