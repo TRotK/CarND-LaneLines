@@ -84,7 +84,7 @@ In order to take on the challenge video clip, I did the following modification t
 
 * RANSAC is an iterative algorithm, and therefore is potentially inefficient. 
 
-* The real-world pavement could be even more challenging than what happens in the video challenge.mp4, such as a ruleless break in cement concrete pavement. The current pipeline is using slope which could fail on vertical breaks.  
+* The real-world pavement could be even more challenging than what happens in the video challenge.mp4, such as a ruleless break in cement concrete pavement. The current pipeline is using slope filtering which could fail on vertical breaks.  
 
 
 ### 3. Suggest possible improvements to your pipeline
