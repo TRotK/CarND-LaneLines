@@ -25,6 +25,8 @@ The goals / steps of this project are the following:
 [fig11]: ./test_images_output/lane_marks/solidYellowLeft.jpg
 [fig12]: ./test_images_output/lane_marks/whiteCarLaneSwitch.jpg
 
+[vid1]: ./test_videos_output/solidWhiteRight.mp4
+
 ---
 
 ### Reflection
@@ -58,6 +60,11 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 ![alt text][fig10]
 ![alt text][fig11]
 ![alt text][fig12]
+
+Test on Videos:
+
+![alt text][vid1]
+
 
 
 ### 2. Identify potential shortcomings with your current pipeline
