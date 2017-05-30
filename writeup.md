@@ -32,8 +32,7 @@ My pipeline is as follows.
 * I specified the region of interest as a trapezoid and used it to filter out all the edges outside of the region. Since the camera is not exactly centered, my mask was shifted as well.
 * I ran Hough transform with rho = 2, theta = pi / 180, threshold = 20, min_line_length = 10 and max_line_gap = 10.
 
-![alt text][solidWhiteCurve]
-![alt text][solidWhiteRight]
+![alt text][solidWhiteCurve]![alt text][solidWhiteRight]
 ![alt text][solidYellowCurve]
 ![alt text][solidYellowCurve2]
 ![alt text][solidYellowLeft]
