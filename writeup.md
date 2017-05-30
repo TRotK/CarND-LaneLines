@@ -11,12 +11,19 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[solidWhiteCurve]: ./test_images_output/line_segments/solidWhiteCurve.jpg
-[solidWhiteRight]: ./test_images_output/line_segments/solidWhiteRight.jpg
-[solidYellowCurve]: ./test_images_output/line_segments/solidYellowCurve.jpg
-[solidYellowCurve2]: ./test_images_output/line_segments/solidYellowCurve2.jpg
-[solidYellowLeft]: ./test_images_output/line_segments/solidYellowLeft.jpg
-[whiteCarLaneSwitch]: ./test_images_output/line_segments/whiteCarLaneSwitch.jpg
+[fig1]: ./test_images_output/line_segments/solidWhiteCurve.jpg
+[fig2]: ./test_images_output/line_segments/solidWhiteRight.jpg
+[fig3]: ./test_images_output/line_segments/solidYellowCurve.jpg
+[fig4]: ./test_images_output/line_segments/solidYellowCurve2.jpg
+[fig5]: ./test_images_output/line_segments/solidYellowLeft.jpg
+[fig6]: ./test_images_output/line_segments/whiteCarLaneSwitch.jpg
+
+[fig7]: ./test_images_output/lane_marks/solidWhiteCurve.jpg
+[fig8]: ./test_images_output/lane_marks/solidWhiteRight.jpg
+[fig9]: ./test_images_output/lane_marks/solidYellowCurve.jpg
+[fig10]: ./test_images_output/lane_marks/solidYellowCurve2.jpg
+[fig11]: ./test_images_output/lane_marks/solidYellowLeft.jpg
+[fig12]: ./test_images_output/lane_marks/whiteCarLaneSwitch.jpg
 
 ---
 
@@ -32,11 +39,12 @@ My pipeline is as follows.
 * I specified the region of interest as a trapezoid and used it to filter out all the edges outside of the region. Since the camera is not exactly centered, my mask was shifted as well.
 * I ran Hough transform with rho = 2, theta = pi / 180, threshold = 20, min_line_length = 10 and max_line_gap = 10.
 
-![alt text][solidWhiteCurve]![alt text][solidWhiteRight]
-![alt text][solidYellowCurve]
-![alt text][solidYellowCurve2]
-![alt text][solidYellowLeft]
-![alt text][whiteCarLaneSwitch]
+![alt text][fig1]
+![alt text][fig2]
+![alt text][fig3]
+![alt text][fig4]
+![alt text][fig5]
+![alt text][fig6]
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() as my_draw_lines().
 
@@ -44,13 +52,12 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 * I applied linear regression on two sets of line segments, respectively, to estimate two line equations.
 * According to the estimated line parameters, I drew only one line on the left and right lanes at their reasonable position.
 
-
- 
-
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
+![alt text][fig7]
+![alt text][fig8]
+![alt text][fig9]
+![alt text][fig10]
+![alt text][fig11]
+![alt text][fig12]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
