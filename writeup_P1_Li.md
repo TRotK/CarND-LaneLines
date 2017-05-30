@@ -75,7 +75,7 @@ In order to take on the challenge video clip, I did the following modification t
 * Instead of using a simple linear regression, I incorporated RANSAC algorithm for outlier rejection. 
 * I still fit endpoints using linear regression but only on the inliers. 
 * RANSAC regression was implemented with scikit-learn library.
-* If no lane detected, skip this frame to prevent raising errors. (Not used in the challenge actually)  
+* If no lane detected, skip this frame to prevent raising errors. (Not get used in the challenge actually.)  
 * The resulting video are stored in the folder test_videos_output, named challenge.mp4.
 * The enhanced pipeline still works well on both solidWhiteRight.mp4 and solidYellowLeft.mp4.
 
