@@ -40,6 +40,7 @@ The goals / steps of this project are the following:
 * I applied Canny edge detection on the smoothed image with low threshold being 80 and high threshold 180.
 * I specified the region of interest as a trapezoid and used it to filter out all the edges outside of the region. Since the camera is not exactly centered, my mask was shifted as well.
 * I ran Hough transform with rho = 2, theta = pi / 180, threshold = 20, min_line_length = 10 and max_line_gap = 10.
+* I superimposed the result with the original image using weighted_img() helper function.
 
 ![alt text][fig1]
 ![alt text][fig2]
@@ -51,7 +52,7 @@ The goals / steps of this project are the following:
 #### In order to draw a single line on the left and right lanes, I modified the draw_lines() as my_draw_lines().
 
 * I separated the hough line segments into two groups according to their slope and position (left/right) on the image.
-* I applied linear regression on two sets of line segments, respectively, to estimate two line equations.
+* I applied linear regression on the lines' endpoints, estimating the two line equations, respectively.
 * According to the estimated line parameters, I drew only one line on the left and right lanes at their reasonable position.
 
 ![alt text][fig7]
@@ -61,9 +62,20 @@ The goals / steps of this project are the following:
 ![alt text][fig11]
 ![alt text][fig12]
 
-#### Test on Videos:
+#### Test on Videos
 
-* The pipeline works well on solidWhiteRight.mp4 and solidYellowLeft.mp4. The resulting videos are in the folder test_videos_output.
+The pipeline above works well on solidWhiteRight.mp4 and solidYellowLeft.mp4. The resulting videos are stored in the folder test_videos_output.
+
+#### Optional challenge
+
+In order to take on the challenge video clip, I did the following modification to my pipeline.
+
+* I skipped the grayscale step for better contrast.
+* Instead of using a simple linear regression, I incorporated RANSAC algorithm for outlier rejection. 
+* I still fit endpoints using linear regression but only on the inliers. 
+* RANSAC regression was implemented with scikit-learn library.
+* The resulting video is stored in the folder test_videos_output, named challenge.mp4.
+* The enhanced pipeline still works well on both solidWhiteRight.mp4 and solidYellowLeft.mp4.
 
 
 ### 2. Identify potential shortcomings with your current pipeline
@@ -80,6 +92,6 @@ A possible improvement would be to ...
 Another potential improvement could be to ...
 
 
-### 4. Optional challenge
 
-In order to 
+
+
