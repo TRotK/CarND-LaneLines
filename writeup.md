@@ -55,7 +55,7 @@ The goals / steps of this project are the following:
 * I applied linear regression on the lines' endpoints, estimating the two line equations, respectively.
 * According to the estimated line parameters, I drew only one line on the left and right lanes at their reasonable position.
 
-![alt text][fig7]
+![alt text][fig7][fig8]
 ![alt text][fig8]
 ![alt text][fig9]
 ![alt text][fig10]
