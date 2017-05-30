@@ -32,7 +32,12 @@ My pipeline is as follows.
 * I specified the region of interest as a trapezoid and used it to filter out all the edges outside of the region. Since the camera is not exactly centered, my mask was shifted as well.
 * I ran Hough transform with rho = 2, theta = pi / 180, threshold = 20, min_line_length = 10 and max_line_gap = 10.
 
-
+![alt text][solidWhiteCurve]
+![alt text][solidWhiteRight]
+![alt text][solidYellowCurve]
+![alt text][solidYellowCurve2]
+![alt text][solidYellowLeft]
+![alt text][whiteCarLaneSwitch]
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() as my_draw_lines().
 
@@ -47,7 +52,6 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
-![alt text][image1]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
